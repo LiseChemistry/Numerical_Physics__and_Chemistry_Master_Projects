@@ -96,8 +96,7 @@ This project aims to study the behavior, limitations, and statistical properties
 
 The LC-RNG generates a sequence of numbers using the formula:
 
-$x_{n+1} = (k x_n + l) \mod m$  
-$\quad r_n = \frac{x_n}{m}$
+![LC-RNG](https://latex.codecogs.com/svg.image?\large&space;\bg{green}$x_{n&plus;1}=(k&space;x_n&plus;l)\mod&space;m$$\quad&space;r_n=\frac{x_n}{m}$)
 
 Where:  
 - `k`, `l`, `m`: positive integers (parameters)  
@@ -138,16 +137,16 @@ Quantify correlation using the **autocorrelation function**.
 #### 🔍 Definitions:
 
 - Temporal Mean:
- $\bar{x}(t) = \frac{1}{T} \sum_{t=1}^{T} x_t$
+![TM](https://latex.codecogs.com/svg.image?\large&space;\bg{green}$\bar{x}(t)=\frac{1}{T}\sum_{t=1}^{T}x_t$)
 
 - Correlation between two variables x and y:
- $R_{xy} = \frac{1}{T} \sum_{t=1}^{T} x_t y_t$
+![Correlation](https://latex.codecogs.com/svg.image?\large&space;\bg{green}$R_{xy}=\frac{1}{T}\sum_{t=1}^{T}x_t&space;y_t$)
 
 - Autocorrelation function:
- $R_x(\tau) = \frac{1}{T} \sum_{t=1}^{T} x_t x_{t+\tau}$
+![autocorrelation](https://latex.codecogs.com/svg.image?\large&space;\bg{green}$R_x(\tau)=\frac{1}{T}\sum_{t=1}^{T}x_t&space;x_{t&plus;\tau}$)
 
 - Normalized Autocorrelation:
-  $C_x(\tau) = \frac{R_{\delta x}(\tau)}{R_{\delta x}(0)} = \frac{\sum_i (x_i - \bar{x})(x_{i+\tau} - \bar{x})}{\sum_i (x_i - \bar{x})^2}$
+![normalized_autocorrelation](https://latex.codecogs.com/svg.image?\large&space;\bg{green}$C_x(\tau)=\frac{R_{\delta&space;x}(\tau)}{R_{\delta&space;x}(0)}=\frac{\sum_i(x_i-\bar{x})(x_{i&plus;\tau}-\bar{x})}{\sum_i(x_i-\bar{x})^2}$)
 
   Where $\delta x(t) = x(t) - \bar{x}$ and $\tau$ is a time shift.
 
