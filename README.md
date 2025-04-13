@@ -147,7 +147,7 @@ Quantify correlation using the **autocorrelation function**.
  $R_x(\tau) = \frac{1}{T} \sum_{t=1}^{T} x_t x_{t+\tau}$
 
 - Normalized Autocorrelation:
-  $C_x(\tau) = \frac{R_{\delta x}(\tau)}{R_{\delta x}(0)} = \frac{\sum_i (x_i - \bar{x})(x_{i+\tau} - \bar{x})}{\sum_i (x_i - \bar{x})^2}$]
+  $C_x(\tau) = \frac{R_{\delta x}(\tau)}{R_{\delta x}(0)} = \frac{\sum_i (x_i - \bar{x})(x_{i+\tau} - \bar{x})}{\sum_i (x_i - \bar{x})^2}$
 
   Where $\delta x(t) = x(t) - \bar{x}$ and $\tau$ is a time shift.
 
@@ -200,7 +200,7 @@ This project involves implementing a **Molecular Dynamics (MD)** simulation to s
 #### 🧲 Interactions
 - **Lennard-Jones potential** (in reduced units):
 
-$u(r) = 4 \left( \frac{1}{r^{12}} - \frac{1}{r^6} \right)$
+![Lennard-Jones](https://latex.codecogs.com/svg.image?\large&space;\bg{green}u(r)=4\left(\frac{1}{r^{12}}-\frac{1}{r^6}\right))
 
 - **Interaction cutoff**: $R_c = 2.5\sigma$
   - Beyond this distance, inter-particle interactions are neglected for efficiency
