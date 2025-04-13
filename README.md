@@ -61,14 +61,14 @@ Generate 2 initial configurations:
 - Performing of the **reverse experiment**: gradually **decrease** the temperature.
 - Analysis of the structural changes during cooling.
 
-### 📈  Isotherms and Pressure Measurement
+### 📈 Isotherms and Pressure Measurement
 
 - Measuring the **pressure** using the **virial method**. 
 - Plot of an **isotherm**: pressure \( P \) as a function of volume \( V \) at a **fixed temperature** (`kT = const`).
 
-### 🌐  Phase Transition Characterization
+###  Phase Transition Characterization
 
-- At `kT = 0.05`, conducting of the simulations to plot the **average energy per particle** as a function of **density** over the range \([0, 1.3]\).
+- At `kT = 0.05`, conducting of the simulations to plot the **average energy per particle** as a function of **density** over the range [0, 1.3].
 - Conclusion about the **phase transition**.
 
 ### 🛠️ Tools:
@@ -96,41 +96,35 @@ This project aims to study the behavior, limitations, and statistical properties
 
 The LC-RNG generates a sequence of numbers using the formula:
 
-\[
-x_{n+1} = (k x_n + l) \mod m, \quad r_n = \frac{x_n}{m}
-\]
+`x_{n+1} = (k x_n + l) mod m`, `r_n = x_n / m`
 
-Where:
-- \(k\), \(l\), \(m\): positive integers (parameters)
-- \(x_0\): initial seed
-- \(x_n\): integer values
-- \(r_n\): normalized values in [0, 1)
+Where:  
+- `k`, `l`, `m`: positive integers (parameters)  
+- `x_0`: initial seed  
+- `x_n`: integer values  
+- `r_n`: normalized values in 
 
 ### 1️⃣ Period Calculation
 
-Implement an algorithm that computes the **period** of the sequence \({x_n}\), i.e., the number of steps before the sequence repeats.
+Implement an algorithm that computes the **period** of the sequence ${x_n}$, i.e., the number of steps before the sequence repeats.
 
 #### 🔧 Test Cases:
-- **P1**: `k = 899`, `l = 0`, `m = 32768`, `\(x_0\) = 12`
-- **P2**: `k = 16807`, `l = 0`, `m = 6075`, `\(x_0\) = 12`
-- **P3**: `k = 7^5`, `l = 0`, `m = 2^31 − 1`, `x_0 = 12`  
+- **P1**: `k = 899`, `l = 0`, `m = 32768`, `$x_0$ = 12`
+- **P2**: `k = 16807`, `l = 0`, `m = 6075`, `$x_0$ = 12`
+- **P3**: `k = 7^5`, `l = 0`, `m = 2^31 − 1`, `$x_0$ = 12`  
 
 #### 🎯 Tasks:
 - Determine the exact period length for each case.
-- Investigate how **small changes in parameters** (e.g., \(k\) or \(m\)) affect the period.
+- Investigate how **small changes in parameters** (e.g., $k$ or $m$ affect the period.
 - Conclusions on the quality of each parameter set.
 
 ### 2️⃣ Correlation Visualization
 
-Write a program to generate a large number \(N\) of values using the LC-RNG. Then, create a **scatter plot**:
-
-\[
-(x_n, x_{n+1})
-\]
+Write a program to generate a large number $N$ of values using the LC-RNG. Then, create a **scatter plot**: $(x_n, x_{n+1})$.
 
 #### 🎯 Tasks:
-- Generate \(N\) values.
-- Plot \(x_{n+1}\) vs \(x_n\) for different parameter sets (P1, P2, P3.)
+- Generate $N$ values.
+- Plot $x_{n+1}$ vs $x_n$ for different parameter sets (P1, P2, P3.)
 - Results:
   - **patterns** vs **clusters**?
   - What do these patterns suggest about **randomness**?
@@ -143,35 +137,27 @@ Quantify correlation using the **autocorrelation function**.
 #### 🔍 Definitions:
 
 - Temporal Mean:
-  \[
-  \bar{x}(t) = \frac{1}{T} \sum_{t=1}^{T} x_t
-  \]
+ $\bar{x}(t) = \frac{1}{T} \sum_{t=1}^{T} x_t$
 
 - Correlation between two variables x and y:
-  \[
-  R_{xy} = \frac{1}{T} \sum_{t=1}^{T} x_t y_t
-  \]
+ $R_{xy} = \frac{1}{T} \sum_{t=1}^{T} x_t y_t$
 
 - Autocorrelation function:
-  \[
-  R_x(\tau) = \frac{1}{T} \sum_{t=1}^{T} x_t x_{t+\tau}
-  \]
+ $R_x(\tau) = \frac{1}{T} \sum_{t=1}^{T} x_t x_{t+\tau}$
 
 - Normalized Autocorrelation:
-  \[
-  C_x(\tau) = \frac{R_{\delta x}(\tau)}{R_{\delta x}(0)} = \frac{\sum_i (x_i - \bar{x})(x_{i+\tau} - \bar{x})}{\sum_i (x_i - \bar{x})^2}
-  \]
+  $C_x(\tau) = \frac{R_{\delta x}(\tau)}{R_{\delta x}(0)} = \frac{\sum_i (x_i - \bar{x})(x_{i+\tau} - \bar{x})}{\sum_i (x_i - \bar{x})^2}$]
 
-  Where \(\delta x(t) = x(t) - \bar{x}\) and \(\tau\) is a time shift.
+  Where $\delta x(t) = x(t) - \bar{x}$ and $\tau$ is a time shift.
 
 #### 🎯 Tasks:
-- Compute \(C(\tau)\) for various lags \(\tau\)
+- Compute $C(\tau)$ for various lags $\tau$
 - Test sequences:
-  - Constant: \(1, 1, 1, 1, ...\)
-  - Alternating: \(1, 2, 1, 2, ...\)
-  - Random: \(+1, -1\)
+  - Constant: $1, 1, 1, 1, ...$
+  - Alternating: $1, 2, 1, 2, ...$
+  - Random: $(+1, -1)$
 - Results:
-  - What value does \(C(\tau)\) take for perfectly correlated sequences?
+  - What value does $C(\tau)$ take for perfectly correlated sequences?
   - What value for random ones?
 
 ### 4️⃣ Improved Generator
@@ -179,7 +165,7 @@ Quantify correlation using the **autocorrelation function**.
 Improve the quality of LC-RNG output by **combining two weak generators**.
 
 #### 💡 Method:
-- LC-RNG #1 to generate a list of \(M_1\) values
+- LC-RNG #1 to generate a list of $M_1$ values
 - LC-RNG #2 to randomly **select an index** from that list
 - Selected value as the random output
 - Replacement of used value with a new one from LC-RNG #1
@@ -192,8 +178,8 @@ Improve the quality of LC-RNG output by **combining two weak generators**.
   - Statistical randomness
 
 ### 📈 Final Results:
-✔️ Plot: \(x_{n+1}\) vs \(x_n\)
-✔️ Plot: Autocorrelation \(C(\tau)\)
+✔️ Plot: $x_{n+1}$ vs $x_n$
+✔️ Plot: Autocorrelation $C(\tau)$
 ✔️ Table: Periods for each parameter set
 
 ---
@@ -207,17 +193,15 @@ This project involves implementing a **Molecular Dynamics (MD)** simulation to s
 
 #### 🧊 System Description
 - **Number of particles (N)**: Predefined and modifiable
-- **Simulation box**: 2D square domain of size \( L \times L \)
+- **Simulation box**: 2D square domain of size $L \times L$)
 - **Boundary conditions**: Periodic boundaries with **minimum image convention**
 
 #### 🧲 Interactions
 - **Lennard-Jones potential** (in reduced units):
 
-  \[
-  u(r) = 4 \left( \frac{1}{r^{12}} - \frac{1}{r^6} \right)
-  \]
+$u(r) = 4 \left( \frac{1}{r^{12}} - \frac{1}{r^6} \right)$
 
-- **Interaction cutoff**: \( R_c = 2.5\sigma \)
+- **Interaction cutoff**: $R_c = 2.5\sigma$
   - Beyond this distance, inter-particle interactions are neglected for efficiency
 
 #### ⏱️ Time Integration
