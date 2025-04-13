@@ -96,8 +96,8 @@ This project aims to study the behavior, limitations, and statistical properties
 
 The LC-RNG generates a sequence of numbers using the formula:
 
-$x_{n+1} = (k x_n + l) \quad mod \; m$
-$r_n = \frac{x_n}{m}$
+$x_{n+1} = (k x_n + l) \mod m$  
+$\quad r_n = \frac{x_n}{m}$
 
 Where:  
 - `k`, `l`, `m`: positive integers (parameters)  
