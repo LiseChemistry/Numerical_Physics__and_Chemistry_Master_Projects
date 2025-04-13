@@ -64,11 +64,11 @@ Generate 2 initial configurations:
 ### 📈 Isotherms and Pressure Measurement
 
 - Measuring the **pressure** using the **virial method**. 
-- Plot of an **isotherm**: pressure \( P \) as a function of volume \( V \) at a **fixed temperature** (`kT = const`).
+- Plot of an **isotherm**: pressure `P` as a function of volume `V` at a **fixed temperature** (`kT = const`).
 
 ###  Phase Transition Characterization
 
-- At `kT = 0.05`, conducting of the simulations to plot the **average energy per particle** as a function of **density** over the range [0, 1.3].
+- At `kT = 0.05`, conducting of the simulations to plot the **average energy per particle** as a function of **density** over the range `[0, 1.3`].
 - Conclusion about the **phase transition**.
 
 ### 🛠️ Tools:
@@ -96,7 +96,8 @@ This project aims to study the behavior, limitations, and statistical properties
 
 The LC-RNG generates a sequence of numbers using the formula:
 
-$x_{n+1} = (k x_n + l) \quad mod \; m$, $r_n$ = $/frac{x_n}{m}$
+$x_{n+1} = (k x_n + l) \quad mod \; m$
+$r_n = \frac{x_n}{m}$
 
 Where:  
 - `k`, `l`, `m`: positive integers (parameters)  
