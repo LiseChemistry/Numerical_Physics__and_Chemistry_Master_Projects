@@ -75,7 +75,7 @@ Generate 2 initial configurations:
 
 - `Python` / `C`
 - Scientific libraries: `NumPy`, `Matplotlib`.
-- Visualization tools:`VMD`, `Avito`.
+- Visualization tools:`VMD`, `Ovito`.
 
 ### 🧠 Learning Outcomes
 
