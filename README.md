@@ -96,7 +96,7 @@ This project aims to study the behavior, limitations, and statistical properties
 
 The LC-RNG generates a sequence of numbers using the formula:
 
-$x_{n+1} = (k x_n + l) mod m$, $r_n = x_n / m$
+$x_{n+1} = (k x_n + l) \quad mod \; m$, $r_n$ = $/frac{x_n}{m}$
 
 Where:  
 - `k`, `l`, `m`: positive integers (parameters)  
@@ -109,9 +109,9 @@ Where:
 Implement an algorithm that computes the **period** of the sequence ${x_n}$, i.e., the number of steps before the sequence repeats.
 
 #### 🔧 Test Cases:
-- **P1**: `k = 899`, `l = 0`, `m = 32768`, `$x_0$ = 12`
-- **P2**: `k = 16807`, `l = 0`, `m = 6075`, `$x_0$ = 12`
-- **P3**: `k = $7^5$`, `l = 0`, `m = $2^31 − 1$`, `$x_0$ = 12`  
+- **P1**: $k = 899$, $l = 0$, $m = 32768$, $x_0 = 12$
+- **P2**: $k = 16807$, $l = 0$, $m = 6075$, $x_0 = 12$
+- **P3**: $k = 7^5$, $l = 0$, $m = 2^31 − 1$, $x_0 = 12$  
 
 #### 🎯 Tasks:
 - Determine the exact period length for each case.
@@ -178,9 +178,9 @@ Improve the quality of LC-RNG output by **combining two weak generators**.
   - Statistical randomness
 
 ### 📈 Final Results:
-✔️ Plot: $x_{n+1}$ vs $x_n$
-✔️ Plot: Autocorrelation $C(\tau)$
-✔️ Table: Periods for each parameter set
+- Plot: $x_{n+1}$ vs $x_n$
+- Plot: Autocorrelation $C(\tau)$
+- Table: Periods for each parameter set
 
 ---
 ## 🧪 Project III: Molecular Dynamics Simulation
