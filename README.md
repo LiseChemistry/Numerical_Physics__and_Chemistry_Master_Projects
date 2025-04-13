@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # 📚 **Numerical Physics – Master Projects**
-)
+
 [![Python](https://img.shields.io/badge/code-Python-yellow?style=flat-square&logo=python)](https://www.python.org/)
 [![C](https://img.shields.io/badge/code-C-blue?style=flat-square&logo=c)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -257,7 +256,3 @@ This project involves implementing a **Molecular Dynamics (MD)** simulation to s
 ### License
 
 The package is licensed under the MIT License.
-=======
-# Numerical_Physics_Master_Projects
-Numerical projects using C and Python: Monte Carlo Simulation of Phase Transitions Systems, Random Number Generators, Molecular Dynamics Simulation
->>>>>>> bb15ba25aed29ab89f6f64d8eb6f58f851840dc6
