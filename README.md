@@ -96,13 +96,13 @@ This project aims to study the behavior, limitations, and statistical properties
 
 The LC-RNG generates a sequence of numbers using the formula:
 
-`x_{n+1} = (k x_n + l) mod m`, `r_n = x_n / m`
+$x_{n+1} = (k x_n + l) mod m$, $r_n = x_n / m$
 
 Where:  
 - `k`, `l`, `m`: positive integers (parameters)  
-- `x_0`: initial seed  
-- `x_n`: integer values  
-- `r_n`: normalized values in 
+- $x_0$: initial seed  
+- $x_n$: integer values  
+- $r_n$: normalized values in 
 
 ### 1️⃣ Period Calculation
 
@@ -111,7 +111,7 @@ Implement an algorithm that computes the **period** of the sequence ${x_n}$, i.e
 #### 🔧 Test Cases:
 - **P1**: `k = 899`, `l = 0`, `m = 32768`, `$x_0$ = 12`
 - **P2**: `k = 16807`, `l = 0`, `m = 6075`, `$x_0$ = 12`
-- **P3**: `k = 7^5`, `l = 0`, `m = 2^31 − 1`, `$x_0$ = 12`  
+- **P3**: `k = $7^5$`, `l = 0`, `m = $2^31 − 1$`, `$x_0$ = 12`  
 
 #### 🎯 Tasks:
 - Determine the exact period length for each case.
